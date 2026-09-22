@@ -1,6 +1,6 @@
 # HyperFrames Gotchas
 
-本文件随课程逐轮增长。当前记录第 00—01 轮已经遇到的高复发问题。
+本文件随课程逐轮增长。当前记录第 00—02 轮已经遇到的高复发问题。
 
 ## 产品名称
 
@@ -41,6 +41,26 @@ Track 组织时间轴；DOM stacking context 与 z-index 决定像素覆盖。�
 ## 把真实时间当作品时间
 
 不要用 `Date.now()`、timer 或 `requestAnimationFrame()` 累加离线作品进度。画面状态必须能够从 frame/time 直接求出。
+
+## 把总帧数当作最后帧序号
+
+帧索引从 0 开始。5 秒、30 fps 共有 150 帧，帧号是 `0…149`；Composition 的 5 秒终点不是额外的 `frame 150`。
+
+## 把 Clip 终点当作包含边界
+
+Clip 窗口使用左闭右开规则：`start <= time < end`。相邻 Clip 在共同边界不会同时可见；播放器可在 Composition 终点保留最后画面，但 Render 不因此增加终点帧。
+
+## 认为提高 FPS 会自动产生慢动作
+
+FPS 决定一秒采样多少次。把 30 fps 改成 60 fps 通常只会让相同秒数拥有更多帧，不会自动改变故事速度。慢动作需要修改源时间到作品时间的映射。
+
+## 忽略 `--fps` 对 `data-fps` 的覆盖
+
+Render 时显式 `--fps` 优先于根节点 `data-fps`，两者都没有时默认 30 fps。项目若保存了帧号、逐帧素材或跟踪数据，覆盖 FPS 后必须重新换算和审计。
+
+## 误读 `snapshot --frames`
+
+`snapshot --frames 10` 表示在全片均匀抽取 10 张，不是捕获第 10 帧。要检查第 N 帧，先用 `N / fps` 换算为秒，再传给 `snapshot --at`。
 
 ## 渲染时读取临时网络
 
