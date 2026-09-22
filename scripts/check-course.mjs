@@ -21,7 +21,7 @@ required("SOURCES.md");
 for (const id of status.completed || []) {
   const lessonPath = `${id}/readme.md`;
   const lesson = required(lessonPath);
-  for (const marker of ["## 本轮目标", "## 本轮结论", "## 十三、本轮理解审计"]) {
+  for (const marker of ["## 本轮目标", "## 本轮结论"]) {
     if (lesson && !lesson.includes(marker)) failures.push(`${lessonPath}: missing ${marker}`);
   }
   if (!readme.includes(`(${lessonPath})`)) failures.push(`README.md: missing link to ${lessonPath}`);

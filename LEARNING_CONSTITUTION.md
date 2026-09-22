@@ -4,7 +4,9 @@
 
 ## 1. 一次只完成一轮
 
-每次对话只制作一轮详细课程。当前轮必须讲清概念、给出参考代码、参数实验和审计标准。只有用户说“下一轮”后才制作下一轮。
+每次对话只制作一轮详细课程。当前轮讲清概念，并给出理解所需的参考代码。只有用户说“下一轮”后才制作下一轮。
+
+练习、测试题和正式审计题暂缓制作，等具备合适资源后再统一补充；不能为了填目录而提前生成低质量题目。
 
 ## 2. Meaning before effects
 
@@ -46,7 +48,7 @@ AI 可以写大部分代码。学习者必须检查 Prompt、可见代码、指�
 doctor → lint → check → timeline / snapshot → preview → render
 ```
 
-每道正式练习保存 task、prompt、harness、params、solution 与 audit。
+正式练习恢复制作后，再保存 task、prompt、harness、params、solution 与 audit。讲义阶段不强行制造测试题。
 
 ## 11. Four audits
 

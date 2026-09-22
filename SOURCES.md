@@ -1,11 +1,13 @@
 # Sources and version boundary
 
-第 00 轮建立于 2026-09-22，依据 HeyGen HyperFrames 官方仓库与文档。
+第 00—01 轮建立于 2026-09-22，依据 HeyGen HyperFrames 官方仓库与文档。
 
 - [Official repository](https://github.com/heygen-com/hyperframes)
 - [Introduction](https://hyperframes.heygen.com/introduction)
 - [Quickstart](https://hyperframes.heygen.com/quickstart)
 - [Compositions](https://hyperframes.heygen.com/concepts/compositions)
+- [Data attributes](https://hyperframes.heygen.com/concepts/data-attributes)
+- [HTML schema](https://hyperframes.heygen.com/reference/html-schema)
 - [Deterministic rendering](https://hyperframes.heygen.com/concepts/determinism)
 - [Frame adapters](https://hyperframes.heygen.com/concepts/frame-adapters)
 - [Rendering](https://hyperframes.heygen.com/guides/rendering)

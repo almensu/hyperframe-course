@@ -243,6 +243,7 @@ frame + locked inputs → 当前完整状态
       data-duration="4"
       data-width="1920"
       data-height="1080"
+      data-no-timeline
     >
       <section
         class="clip title-card"
@@ -273,7 +274,11 @@ frame + locked inputs → 当前完整状态
 
 ### `class="clip"`
 
-告诉 HyperFrames：这个元素有自己的时间窗口，窗口外由 Runtime 管理其可见性。
+这是 HyperFrames 生态统一使用的布局与工具约定。当前 Runtime 依据 `data-start` 等时间属性管理时间窗口；课程仍要求可见 timed element 使用 `class="clip"`，让布局、Studio 和代码阅读保持一致。
+
+### `data-no-timeline`
+
+本例没有注册 GSAP 等动画 Timeline。这个布尔属性明确告诉 Runtime：不要等待一条不存在的 Timeline；画面时间仅由 Composition 与 Clip 属性描述。
 
 ### Clip 的 `data-start` 与 `data-duration`
 

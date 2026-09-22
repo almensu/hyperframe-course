@@ -1,8 +1,9 @@
 {
   "totalRounds": 30,
   "completed": [
-    "00"
+    "00",
+    "01"
   ],
-  "next": "01",
-  "workflow": "one detailed round per conversation"
+  "next": "02",
+  "workflow": "one detailed round per conversation; exercises and tests deferred until resources are available"
 }
