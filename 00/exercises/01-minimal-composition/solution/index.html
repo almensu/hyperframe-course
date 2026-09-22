@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>00-01 Minimal Composition</title>
+    <style>
+      * { box-sizing: border-box; }
+      html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+      body { background: #07111f; font-family: Arial, "Noto Sans SC", sans-serif; }
+      #stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; color: #f4f8ff; background: radial-gradient(circle at 72% 24%, #173858 0, #07111f 46%, #030812 100%); }
+      .title-card { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; padding: 0 180px; }
+      .eyebrow { margin: 0 0 30px; color: #59d6ff; font-size: 30px; font-weight: 700; letter-spacing: 0.18em; }
+      h1 { max-width: 1200px; margin: 0; font-size: 124px; line-height: 1.04; letter-spacing: -0.045em; }
+    </style>
+  </head>
+  <body>
+    <main id="stage" data-composition-id="minimal-intro" data-start="0" data-duration="4" data-width="1920" data-height="1080">
+      <section class="clip title-card" data-start="0" data-duration="4" data-track-index="0">
+        <p class="eyebrow">HYPERFRAMES COURSE</p>
+        <h1>HTML 也能成为视频</h1>
+      </section>
+    </main>
+  </body>
+</html>

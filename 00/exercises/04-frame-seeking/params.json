@@ -1,0 +1,10 @@
+{
+  "fps": 30,
+  "durationSeconds": 6,
+  "segmentSeconds": 2,
+  "checkTimes": [
+    4.5,
+    0.5,
+    2.5
+  ]
+}

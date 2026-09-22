@@ -1,0 +1,9 @@
+{
+  "durationSeconds": 5,
+  "backgroundTrack": 0,
+  "orbTrack": 1,
+  "headlineTrack": 2,
+  "backgroundZ": 0,
+  "orbZ": 1,
+  "headlineZ": 2
+}

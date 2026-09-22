@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>00-02 Time Window</title>
+    <style>
+      * { box-sizing: border-box; }
+      html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+      body { background: #0a0d18; font-family: Arial, "Noto Sans SC", sans-serif; }
+      #stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #0a0d18; color: white; }
+      .message { position: absolute; inset: 0; display: grid; place-items: center; padding: 160px; font-size: 132px; font-weight: 800; letter-spacing: -0.04em; text-align: center; }
+      .first { color: #f5f7ff; }
+      .second { color: #77e4bd; }
+    </style>
+  </head>
+  <body>
+    <main id="stage" data-composition-id="time-window" data-start="0" data-duration="4" data-width="1920" data-height="1080">
+      <section class="clip message first" data-start="0" data-duration="2" data-track-index="0">存在于 HTML</section>
+      <section class="clip message second" data-start="2" data-duration="2" data-track-index="0">此刻才可见</section>
+    </main>
+  </body>
+</html>
